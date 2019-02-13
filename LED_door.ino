@@ -30,11 +30,11 @@ void loop() {
 		int value = mySwitch.getReceivedValue();
 		switch (value) {
             case '1':
-                ledred();
+                ledrgreed();
                 break;
 
             case '2':
-                ledgreen();
+                ledred();
                 break;
 
             default:
@@ -45,15 +45,27 @@ void loop() {
 }
 
 void ledred(){
-	int i;
-	for(i=0;i <NUMPIXELS; i++){
-	    pixels.setPixelColor(i, pixels.Color(150,0,0));
+	while(1){
+	    pixels.setPixelColor(0, pixels.Color(150,0,0));
+	    pixels.setPixelColor(1, pixels.Color(150,0,0));
+	    pixels.setPixelColor(2, pixels.Color(150,0,0));
+	    pixels.setPixelColor(3, pixels.Color(150,0,0));
+	    pixels.setPixelColor(4, pixels.Color(150,0,0));
+	    pixels.setPixelColor(5, pixels.Color(150,0,0));
+	    pixels.setPixelColor(6, pixels.Color(150,0,0));
+	    pixels.setPixelColor(7, pixels.Color(150,0,0));
 	    pixels.show();
 	    delay(50);
-	    pixels.setPixelColor(i, pixels.Color(0,0,0));
+	    pixels.setPixelColor(0, pixels.Color(0,0,0));
+	    pixels.setPixelColor(1, pixels.Color(0,0,0));
+	    pixels.setPixelColor(2, pixels.Color(0,0,0));
+	    pixels.setPixelColor(3, pixels.Color(0,0,0));
+	    pixels.setPixelColor(4, pixels.Color(0,0,0));
+	    pixels.setPixelColor(5, pixels.Color(0,0,0));
+	    pixels.setPixelColor(6, pixels.Color(0,0,0));
+	    pixels.setPixelColor(7, pixels.Color(0,0,0));
 	    delay(50);
     }
-    i=0;
 }
 
 void ledgreen(){
